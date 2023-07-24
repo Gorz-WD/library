@@ -1,6 +1,249 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  background-color: #222;
-  color: aliceblue;
+  background-color: #FFF3D6;
+  color: #333333;
+  font-family: monospace, Helvetica, sans-serif;
+}
+
+#content {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-bottom: 4rem;
+}
+
+#header {
+  height: 8%;
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #F7FFE5;
+
+}
+
+#main {
+  height: 88%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2rem;
+}
+
+#books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr;
+  width: 90%;
+  height: 90%;
+  padding: 0.4rem;
+  box-shadow: 5px 0px 8px 0px rgba(19, 19, 19, 0.11);
+  justify-self: center;
+  aspect-ratio: 16/9;
+  background-color: #F7FFE5;
+  border: 1px solid #0000002d;
+  border-radius: 10px;
+}
+
+.read {
+  background-color: #C1FFD8;
+}
+
+.read:hover,
+.not-read:hover {
+  font-weight: bold;
+}
+
+.not-read {
+  background-color: #FFE5F0;
+}
+
+
+.card-delete {
+  display: flex;
+  justify-content: end;
+}
+
+.card-delete button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.card-delete button:hover {
+  font-weight: bold;
+}
+
+.card-read-status {
+  display: flex;
+  justify-content: center;
+}
+
+.card-read-status button {
+  width: 40%;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 5px 0px 8px 0px rgba(19, 19, 19, 0.11);
+  border: 1px solid #0000002d;
+  border-radius: 5px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card-author,
+.card-pages {
+  padding-left: 1rem;
+  display: flex;
+  font-size: 1rem;
+}
+
+#form-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #22222265;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#book-form {
+  width: 25rem;
+  height: 30rem;
+  background-color: #F7FFE5;
+  padding: 4rem;
+  font-size: 1.5rem;
+  aspect-ratio: 9/16;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#form-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  height: 3rem;
+  margin-bottom: 2rem;
+  width: 22rem;
+  border: #3333338e 1px solid;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.box input {
+  height: 2rem;
+  border: none;
+  outline: none;
+  background-color: #F7FFE5;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  color: #333333;
+}
+
+.box label {
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+#form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#form-buttons button {
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 5px 0px 8px 0px rgba(19, 19, 19, 0.11);
+  border: 1px solid #0000002d;
+  border-radius: 10px;
+}
+
+#form-buttons button:hover {
+  font-weight: bold;
+}
+
+#add-book-btn {
+  background-color: #C1FFD8;
+}
+
+#cancel {
+  background-color: #FFE5F0;
+}
+
+#add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+#add-btn {
+  border-radius: 1000px;
+  height: 4rem;
+  width: 4rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: #F7FFE5;
+  box-shadow: 5px 0px 8px 0px rgba(19, 19, 19, 0.11);
+  border: 1px solid #0000002d;
+}
+
+#add-btn:hover {
+  font-weight: bold;
+  background-color: #f1ffcf;
+}
+
+#footer {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #F7FFE5;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#link {
+  text-decoration: none;
+  color: #333333;
+}
+
+#link:hover {
+  font-weight: bold;
 }
